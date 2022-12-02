@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.PriceCard)Model.Content;
+    
+    //var settings = (ContentModels.MyElementTypeAliasOfSettings)Model.Settings;
+}
+
+<div class="price-card">
+
+    <div class="price-card-top" style="background-color: #@content.CardBackgroundColor">
+        <h1 class="fw-700">@content.Price<span>kr</span></h1>
+        <p>per månad</p>
+    </div>
+
+    <div class="price-card-middle flex-center" style="background: linear-gradient(0deg, rgba(255,255,255,1) 50%, #@content.CardBackgroundColor 50%);">
+        <p class="badge fw-700">@content.BadgeText</p>
+    </div>
+
+    <div class="price-card-bottom flex-col fw-300">
+        <div class="price-card-bottom-text flex-col">
+            @if(content.Features != null && content.Features.Any())
+            {
+                @foreach (var item in content.Features)
+                {
+                    <p>@item</p>
+                }
+            }
+        </div>
+        <a class="price-btn fw-700 hover-anim" href="/">@content.ButtonText</a>
+    </div>
+
+</div>

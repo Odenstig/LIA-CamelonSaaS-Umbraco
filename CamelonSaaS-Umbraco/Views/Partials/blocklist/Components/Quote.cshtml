@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Quote)Model.Content;
+    
+    //var settings = (ContentModels.MyElementTypeAliasOfSettings)Model.Settings;
+}
+
+<div class="quote-box center-text" style="background-image: url(@content.BackgroundImage.Url())">
+
+    <!-- medium container -->
+    <div class="container container-large flex-col">
+        <h2 class="fw-300 quote">
+            @content.QuoteText
+        </h2>
+    </div>
+    
+</div>

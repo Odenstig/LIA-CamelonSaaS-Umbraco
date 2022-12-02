@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Blog)Model.Content;
+    //var settings = (ContentModels.MyElementTypeAliasOfSettings)Model.Settings;
+}
+
+<div class="blog-box center-text">
+    
+    <div class="container container-large flex-col">
+        
+        <!-- medium container -->
+        <div class="container container-medium flex-col title-box-margin-bottom">
+            <h1 class="title function-title fw-300">@content.Value("title")</h1>
+            <p class="fw-300">@content.Value("description")</p>
+        </div>
+
+        <!-- large container for blog posts -->
+        <div class="container container-large flex-row flex-around fw-700">
+            @if(content.BlogBlockList != null && content.BlogBlockList.Any())
+            {
+                @foreach (var block in content.BlogBlockList)
+                {
+
+                    var data = block.Content;
+
+                    @await Html.PartialAsync("blocklist/Components/" + data.ContentType.Alias, block)
+
+                }
+            }
+        </div>
+
+    </div>
+
+</div>

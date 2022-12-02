@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.BlogItem)Model.Content;
+    //var settings = (ContentModels.MyElementTypeAliasOfSettings)Model.Settings;
+}
+
+<div class="blog-card flex-col hover-anim hover-anim">
+    
+    <img class="blog-card-photo" src="@content.BlogImage.Url()" alt="placeholder">
+    <div class="blog-card-line"></div>
+    <div class="blog-card-bottom left-text">
+        <h1 class="fw-700">@content.BlogTitle</h1>
+        <p class="fw-300 ellipsis-overflow">@content.BlogDescription</p>
+    </div>
+
+</div>

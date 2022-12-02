@@ -1,0 +1,14 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<HomePage>
+
+<div class="hero center-text" style="background-image: url(@Model.BackgroundImage.Url());">
+
+    <div class="container container-medium flex-col">
+        <h1 class="fw-700 title">@Model.Title</h1>
+        <p class="fw-300">@Model.Description</p>
+        @if(!Model.HideButton)
+        {
+            <a class="btn fw-700 hover-anim" href="/">VISA MER</a>
+        }
+    </div>
+
+</div>

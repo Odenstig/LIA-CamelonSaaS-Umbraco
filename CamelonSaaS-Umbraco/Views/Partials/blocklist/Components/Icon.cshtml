@@ -1,0 +1,18 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Icon)Model.Content;
+    
+    string icon;
+    if(content.IsLargeIcon)
+        icon = "icon-large";
+    else
+        icon = "icon";
+}
+
+<div class="flex-col">
+    <div class="icon-border flex-col">                        
+        <img class="@icon" src="@content.IconImage.Url()" alt="placeholder">
+    </div>
+    <p class="fw-700" style="color:var(--pink-color)">@content.IconDescription</p>
+</div>

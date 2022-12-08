@@ -30,7 +30,7 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		/// <summary>description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		string Description { get; }
+		global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Description { get; }
 
 		/// <summary>Hide button</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
@@ -92,12 +92,12 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
 		[ImplementPropertyType("description")]
-		public virtual string Description => GetDescription(this, _publishedValueFallback);
+		public virtual global::Umbraco.Cms.Core.Strings.IHtmlEncodedString Description => GetDescription(this, _publishedValueFallback);
 
 		/// <summary>Static getter for description</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "10.3.2+e7fae14")]
 		[return: global::System.Diagnostics.CodeAnalysis.MaybeNull]
-		public static string GetDescription(ITitleDescription that, IPublishedValueFallback publishedValueFallback) => that.Value<string>(publishedValueFallback, "description");
+		public static global::Umbraco.Cms.Core.Strings.IHtmlEncodedString GetDescription(ITitleDescription that, IPublishedValueFallback publishedValueFallback) => that.Value<global::Umbraco.Cms.Core.Strings.IHtmlEncodedString>(publishedValueFallback, "description");
 
 		///<summary>
 		/// Hide button

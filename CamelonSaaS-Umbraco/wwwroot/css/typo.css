@@ -1,33 +1,10 @@
 
 
-/**umb_name:h1 thick*/
-h1 {
-	font-size: 2em;
-	font-weight: 700;
-}
 
-/**umb_name:h1 thin*/
-h1 {
-	font-size: 2em;
-	font-weight: 300;
-}
 
-/**umb_name:title*/
-.title {
-	.title {    display: -webkit-inline-box;
-	display: -ms-inline-flexbox;
-	display: inline-flex;
-	-webkit-box-orient: vertical;
-	-webkit-box-direction: normal;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	}.title:after {    content: '';
+
+
+.title:after {    content: '';
 	display: -webkit-inline-box;
 	display: -ms-inline-flexbox;
 	display: inline-flex;
@@ -36,4 +13,41 @@ h1 {
 	background-color: var(--pink-color);
 	margin: 0.75em 0;
 	};
+}
+
+
+
+
+
+;
+}
+
+/**umb_name:thick*/
+.fw-700 {
+	font-weight: 700;
+}
+
+/**umb_name:thin*/
+.fw-300 {
+	font-weight: 300;
+}
+
+/**umb_name:title*/
+.title {
+	.title {text-decoration: underline;
+}
+
+/**umb_name:h1*/
+h1 {
+	font-size: 2em;
+	/*  36px */;
+}
+
+/**umb_name:Button primary*/
+.btn-primary {
+	background-color: #ed145b;
+	color: white;
+	display: block;
+	padding: 0.5em 4em;
+	border-radius: 30px;
 }
